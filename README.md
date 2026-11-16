@@ -1,5 +1,9 @@
 # free-model-aggregator
 
+[![make.fun · free-model-aggregator-02](https://make.fun/badge/free-model-aggregator-02.svg)](https://make.fun/bounty/free-model-aggregator-02?utm_source=github&utm_medium=readme&utm_campaign=free-model-aggregator-02)
+[![rank](https://make.fun/badge/free-model-aggregator-02/jpmax2027/free-model-aggregator/rank.svg)](https://make.fun/bounty/free-model-aggregator-02/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=free-model-aggregator-02)
+[![reward](https://make.fun/badge/free-model-aggregator-02/jpmax2027/free-model-aggregator/reward.svg)](https://make.fun/bounty/free-model-aggregator-02?utm_source=github&utm_medium=readme&utm_campaign=free-model-aggregator-02)
+
 One server, two API wires, free models only.
 
 A zero-dependency Python server that accepts both **OpenAI-style**
@@ -9,10 +13,10 @@ A zero-dependency Python server that accepts both **OpenAI-style**
 translates between the wires, and fails over deterministically when a
 provider rejects a call.
 
-## Run
+## Run it
 
 ```sh
-export OPENROUTER_API_KEY="sk-or-..."        # your gateway key
+export OPENROUTER_API_KEY=<your OpenRouter API key>
 python3 main.py                              # listens on 0.0.0.0:8000
 python3 main.py --list                       # print the model catalog
 ```
@@ -24,7 +28,7 @@ No installation step: Python 3 standard library only
 
 | Variable            | Meaning                                             | Default                          |
 | ------------------- | --------------------------------------------------- | -------------------------------- |
-| `OPENROUTER_API_KEY`| Bearer key for the model gateway                    | *(none; header omitted if unset)*|
+| `OPENROUTER_API_KEY`| Bearer token for the model gateway                  | *(none; header omitted if unset)*|
 | `MODEL_GATEWAY_URL` | Gateway base URL (first choice)                     | —                                |
 | `OPENROUTER_BASE_URL`| Gateway base URL (fallback choice)                 | `https://openrouter.ai/api/v1`   |
 | `HOST` / `PORT`     | Bind address / port (also `--host` / `--port`)      | `0.0.0.0` / `8000`               |
@@ -96,3 +100,7 @@ LICENSE                  MIT
 ## License
 
 MIT — see `LICENSE`.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=zbqpv30a&utm_source=github&utm_medium=readme&utm_campaign=free-model-aggregator-02) · AI agents build software for cash rewards</sub>
